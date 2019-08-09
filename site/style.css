@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+body {
+	position: relative;
+}
+form {
+	position: absolute;
+	width: 481px;
+	height: 390px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,4%);
+	background: #F7F5F9;
+	border-radius: 12px;
+	box-shadow: 7px 6px 10px rgba(0, 0, 0, 0.3);
+}
+h1 {
+	width: 168px;
+	height: 20px;
+	left: 312px;
+	top: 71px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 20px;
+	display: flex;
+	align-items: center;
+	color: #3B3D43;
+	margin-left: 40px;
+	margin-top: 37px;
+	margin-bottom: 25px;
+}
+input {
+    padding: 3px;
+    color: #666;
+    width: 391px;
+	height: 42px;
+	margin-left: 40px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 20px;
+	border-radius: 6px;
+	box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
+	display: flex;
+	align-items: center;
+	background: #FFFFFF;
+	border: 1px solid transparent;
+	margin-bottom: 22px;
+	text-indent: 10px;
+}
+input:focus {
+    border: 1px solid #854FC8;
+	outline: none;
+	color: #000;
+}
+input:hover {
+    border: 1px solid #854FC8;
+}
+button {
+	background: #6979F8;
+	border-radius: 6px;
+	margin-top: 3px;
+	margin-left: 40px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 17px;
+	line-height: 22px;
+	border-radius: 6px;
+	width: 401px;
+	height: 48px;
+	align-items: center;
+	text-align: center;
+	color: #FFFFFF;
+	border: 1px solid transparent;
+}
+button:focus {
+    border: 1px solid #ccc;
+	outline: none;
+	width: 391px;
+	height: 38px;
+	margin-top: 8px;
+	margin-left: 45px;
+	font-size: 15px;
+}
+button:hover {
+    border: 1px solid #ccc;
+}
+input::placeholder {
+	color: #D0C9D6;
+}
+
+#error_name {
+	color: red;
+	font-size: 8px;
+}

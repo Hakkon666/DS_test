@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Тестовое задание</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="stylesheet" href="style.css">
+	
+</head>
+<body>
+	<form name="myform" action="https://digital-spectr.com/ac/academy.php" method="post">
+		<h1> Задать вопрос </h1>
+		<p>
+			<input id="1" name="name" placeholder="Фамилия Имя Отчество *" required="required"/>
+		</p>
+		<p>
+			<input id="2" name="phone" placeholder="Телефон *" required="required"/>
+		</p>
+		<p>
+			<input id="3" name="email" placeholder="Email" required="required"/>
+		</p>
+		<p>
+			<button onclick="testInfo();">ОТПРАВИТЬ ЗАПРОС</button>
+		</p>
+	</form>
+	<script>  
+      function testInfo(){ 
+		let re = null;
+		text = "",
+		re = /^[а-яА-Я-\s]+$/;
+			if ((re.test((document.getElementById('1')).value))==false) { 
+				text = "Некорректно введено ФИО. Пожалуйста, используйте только русские буквы, пробелы, тире." + "\n";
+				document.getElementById('1').value="";
+			}
+		re = /^[-0-9+]+$/;
+			if ((re.test((document.getElementById('2')).value))==false) { 
+				text = text + "Некорректно введен номер телефона. Пожалуйста, используйте только цифры, “-”, пробелы, “+”." + "\n";
+				document.getElementById('2').value="";
+			}			
+		re = /(\w+@[\w]+?\.[\w]{2,6})/;  
+			if ((re.test((document.getElementById('3')).value))==false) { 
+				text = text + "Некорректно введен email. Пожалуйста, используйте только строки, соответствующие формату email.";
+				document.getElementById('3').value="";
+			}
+		if (text!="")	
+		alert(text);
+		}  
+    </script>  
+</body>
+</html>
+
